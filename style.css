@@ -1,0 +1,350 @@
+body{
+
+    background:#668baf;
+
+    font-family:'Segoe UI', Arial, sans-serif;
+
+}
+
+
+
+/* Navbar */
+
+.navbar{
+
+    background:#111827 !important;
+
+    padding:15px 25px;
+
+}
+
+
+.navbar-brand{
+
+    color:rgb(219, 219, 219) !important;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+
+.nav-link{
+
+    color:#acbdd7 !important;
+
+}
+
+
+.nav-link:hover{
+
+    color:rgb(223, 120, 120) !important;
+
+}
+
+
+
+
+
+/* Heading */
+
+/* .container h1{
+
+    color:#d8c9d4;
+
+    font-weight:700;
+
+}
+
+ */
+.container h1{
+
+    color:#1f2937;
+
+    font-weight:800;
+
+    font-size:45px;
+
+    text-align:center;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+
+    /* 3D text effect */
+
+    text-shadow:
+
+    1px 1px 0 #cbd5e1,
+
+    2px 2px 0 #94a3b8,
+
+    3px 3px 0 #64748b,
+
+    5px 5px 10px rgba(0,0,0,0.25);
+
+
+
+    transition:0.4s ease;
+
+}
+
+
+/* Weather Cards */
+
+.card{
+
+    border:none;
+
+    border-radius:20px;
+
+    background:rgb(34, 53, 63);
+
+    overflow:hidden;
+
+    position:relative;
+
+    transition:0.4s ease;
+
+}
+
+
+
+/* animated border */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:20px;
+
+    padding:3px;
+
+    background:linear-gradient(
+        45deg,
+        #162b58,
+        #edfff4,
+        #38312c,
+        #a38996
+    );
+
+    -webkit-mask:
+    linear-gradient(#928686 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    animation:borderMove 4s linear infinite;
+
+}
+
+
+
+@keyframes borderMove{
+
+    0%{
+
+        filter:hue-rotate(0deg);
+
+    }
+
+
+    100%{
+
+        filter:hue-rotate(360deg);
+
+    }
+
+}
+
+
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 35px rgba(71, 28, 28, 0.15);
+
+}
+
+
+
+
+
+
+/* Different box colors */
+
+
+/* Current weather */
+
+.col:nth-child(1) .card-header{
+
+    background:linear-gradient(135deg,#4568b4,#38bdf8);
+
+}
+
+
+/* Wind */
+
+.col:nth-child(2) .card-header{
+
+    background:linear-gradient(135deg,#16a34a,#4ade80);
+
+}
+
+
+
+/* Humidity */
+
+.col:nth-child(3) .card-header{
+
+    background:linear-gradient(135deg,#9333ea,#d946ef);
+
+}
+
+
+
+
+
+.card-header{
+
+    color:rgb(231, 228, 228);
+
+    font-size:20px;
+
+    font-weight:700;
+
+    padding:18px;
+
+}
+
+
+
+
+
+.card-body{
+
+    padding:35px;
+
+}
+
+
+
+
+
+#cityName{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#d3d9e6;
+
+}
+
+
+
+
+
+.card-body h1{
+
+    font-size:55px;
+
+    font-weight:800;
+
+    color:#9a9e31;
+
+    transition:0.3s;
+
+}
+
+
+
+.card:hover h1{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+p{
+
+    font-size:18px;
+
+    color:#f8f8f8;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* Search */
+
+input{
+
+    border-radius:10px !important;
+
+}
+
+
+
+button{
+
+    border-radius:10px !important;
+
+    background:#2563eb !important;
+
+    color:white !important;
+
+    border:none !important;
+
+}
+
+
+
+button:hover{
+
+    background:#1d4ed8 !important;
+
+}
+
+
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+    .card-body h1{
+
+        font-size:40px;
+
+    }
+
+
+    #cityName{
+
+        font-size:26px;
+
+    }
+
+
+}
